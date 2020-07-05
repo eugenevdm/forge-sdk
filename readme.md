@@ -239,7 +239,7 @@ $forge->siteEnvironmentFile($serverId, $siteId);
 $forge->updateSiteEnvironmentFile($serverId, $siteId, $content);
 
 // Site Repositories and Deployments
-$forge->installGitRepositoryOnSite($serverId, $siteId, array $data, $wait = false);
+$forge->installGitRepositoryOnSite($serverId, $siteId, array $data, $wait = true);
 $forge->updateSiteGitRepository($serverId, $siteId, array $data);
 $forge->destroySiteGitRepository($serverId, $siteId, $wait = false);
 $forge->siteDeploymentScript($serverId, $siteId);
@@ -267,7 +267,7 @@ On a Site Instance you may also call:
 ```php
 $site->refreshToken();
 $site->delete();
-$site->installGitRepository(array $data, $wait = false);
+$site->installGitRepository(array $data, $wait = true);
 $site->updateGitRepository(array $data);
 $site->destroyGitRepository($wait = false);
 $site->getDeploymentScript();
